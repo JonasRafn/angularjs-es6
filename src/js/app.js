@@ -32,7 +32,6 @@ const requires = [
 	'app.settings'
 ];
 
-
 // Mount on window for testing
 window.app = angular.module('app', requires);
 
