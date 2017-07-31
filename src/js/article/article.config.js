@@ -9,7 +9,7 @@ function ArticleConfig($stateProvider) {
 			templateUrl: 'article/article.html',
 			title: 'Article',
 			resolve: {
-				article: (Articles, $state, $stateParams) => {
+				article: function (Articles, $state, $stateParams) {
 					return Articles.get($stateParams.slug).then(
 						(article) => article,
 						(err) => $state.go('app.home')
